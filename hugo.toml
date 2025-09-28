@@ -1,15 +1,10 @@
 baseURL = 'https://example.org/'
-languageCode = 'en-us'
+languageCode = 'zh-CN'
 title = 'intro_page'
 theme='neil-theme'
 
-baseURL = "https://example.org/"
-languageCode = "en-us"
-title = "My Jike Style Site"
-theme = "jike-style"
-
 [params]
-  name = "陈小明"
+  name = "小陈同学"
   bio = "产品设计师 | 摄影爱好者 | 旅行达人"
   avatar = "/images/avatar.jpg"
   stats = [
