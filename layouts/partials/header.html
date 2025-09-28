@@ -1,0 +1,26 @@
+<header>
+    <img src="{{ .Site.Params.avatar }}" alt="头像" class="avatar">
+    <div class="user-info">
+        <h1>{{ .Site.Params.name }}</h1>
+        <p class="bio">{{ .Site.Params.bio }}</p>
+        <div class="stats">
+            {{ range .Site.Params.stats }}
+            <div class="stat-item">
+                <div class="stat-value">{{ .value }}</div>
+                <div class="stat-label">{{ .label }}</div>
+            </div>
+            {{ end }}
+        </div>
+        <div class="social-links">
+            {{ range .Site.Params.socials }}
+            <a href="{{ .url }}" class="social-link"><i class="{{ .icon }}"></i></a>
+            {{ end }}
+        </div>
+    </div>
+</header>
+
+<div class="content-tabs">
+    {{ range .Site.Params.menu }}
+    <div class="tab" data-tab="{{ .name }}">{{ .name }}</div>
+    {{ end }}
+</div>
