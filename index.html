@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>缪斯</title>
+	<meta name="description" content="缪斯 - 数字游民 & 互联网探索者个人主页">
+	<meta name="theme-color" content="#3b82f6">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+	<link rel="apple-touch-icon" href="assets/images/Muse.jpg">
+
+	<!-- 引入霞鹜文楷屏幕阅读体 -->
+	<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.1.0/style.css">
+	<!-- Font Awesome CDN -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+	<!-- 主样式表 -->
+	<link rel="stylesheet" href="style.css">
+	<!-- Favicon -->
+	<link rel="icon" href="assets/images/Muse.jpg">
+</head>
+
+<body>
+	<!-- 加载动画 -->
+	<div class="loading-screen">
+		<div class="loading-spinner"></div>
+	</div>
+
+	<!-- 滚动进度条 -->
+	<div class="progress-bar"></div>
+
+	<!-- 背景装饰元素 -->
+	<div class="decoration-lines left"></div>
+	<div class="decoration-lines right"></div>
+	<div class="floating-dots">
+		<div class="floating-dot"></div>
+		<div class="floating-dot"></div>
+		<div class="floating-dot"></div>
+		<div class="floating-dot"></div>
+	</div>
+
+	<!-- 左侧装饰元素 -->
+	<div class="side-decoration left">
+		<div class="geometric-shape circle"></div>
+		<div class="geometric-shape square"></div>
+		<div class="geometric-shape triangle"></div>
+		<div class="geometric-line"></div>
+		<div class="geometric-line"></div>
+		<div class="geometric-line"></div>
+	</div>
+
+	<!-- 右侧装饰元素 -->
+	<div class="side-decoration right">
+		<div class="geometric-shape circle"></div>
+		<div class="geometric-shape square"></div>
+		<div class="geometric-shape triangle"></div>
+		<div class="geometric-line"></div>
+		<div class="geometric-line"></div>
+		<div class="geometric-line"></div>
+	</div>
+
+	<div class="container">
+		<div class="card">
+			<div class="profile">
+				<div class="avatar">
+					<img src="assets/images/Muse.jpg" alt="个人头像">
+				</div>
+				<h1>缪斯</h1>
+				<p class="title">
+					<i class="fas fa-code"></i>
+					数字游民 & 互联网探索者
+				</p>
+				<div class="location">
+					<i class="fas fa-map-marker-alt"></i>
+					<span>中国，成都</span>
+				</div>
+			</div>
+
+			<!-- 联系方式 小组件 -->
+			<div class="widget-container">
+				<div class="widget contact-widget">
+					<div class="contact-card">
+						<div class="contact-content">
+							<div class="contact-icon">
+								<i class="fa fa-paper-plane"></i>
+							</div>
+							<div class="contact-text">
+								<p>欢迎添加个人社交媒体互相学习！</p>
+							</div>
+						</div>
+						<button class="subscribe-btn">
+							<i class="fas fa-qrcode"></i>
+							点击查看
+						</button>
+					</div>
+				</div>
+			</div>
+
+			<!-- 关于我 小组件 -->
+			<div class="widget-container">
+				<div class="widget about-widget">
+					<div class="widget-header">
+						<div class="widget-icon about-icon">
+							<i class="fa fa-address-card"></i>
+						</div>
+						<h2>关于我</h2>
+					</div>
+					<div class="widget-content">
+						<p>拥有 4 年 AI 算法与应用开发经验，主打 AI 技术栈实践与创新。顺带折腾自媒体和 Crypto，有点野路子但很实战。好奇心重，热爱瞎搞各种新东东。熟练使用 Python，喜欢沉浸在互联网世界中自由穿梭与价值创造。信奉“边学边干”，致力于以技术和内容为驱动，实现可持续的线上收入模式。</p>
+					</div>
+				</div>
+			</div>
+
+
+
+			<!-- 个人产品 小组件 -->
+			<div class="widget-container">
+				<div class="widget products-widget">
+					<div class="widget-header">
+						<div class="widget-icon products-icon">
+							<i class="fa fa-gift"></i>
+						</div>
+						<h2>我的产品</h2>
+					</div>
+					<div class="widget-content">
+						<!-- 产品内容将通过JavaScript动态生成 -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-- 社交媒体弹窗 -->
+	<div class="modal" id="social-modal">
+		<div class="modal-content">
+			<span class="close">
+				<i class="fas fa-times"></i>
+			</span>
+			<div class="modal-header">
+				<i class="fas fa-share-alt"></i>
+				<h3>社交媒体</h3>
+			</div>
+
+			<!-- 社交媒体链接 -->
+			<div class="social-links">
+				<a href="javascript:void(0)" class="social-link wechat" id="copy-wechat">
+					<div class="social-icon">
+						<i class="fab fa-weixin"></i>
+					</div>
+					<div class="social-info">
+						<h4>WeChat</h4>
+						<p>点击复制微信号：museaction</p>
+					</div>
+					<div class="social-arrow copy-icon">
+						<i class="fas fa-copy"></i>
+					</div>
+				</a>
+
+				<a href="javascript:void(0)" class="social-link public-account" id="show-public-account">
+					<div class="social-icon">
+						<i class="fas fa-rss"></i>
+					</div>
+					<div class="social-info">
+						<h4>公众号</h4>
+						<p>【亲爱的缪斯】AI 相关知识分享</p>
+					</div>
+					<div class="social-arrow">
+						<i class="fas fa-qrcode"></i>
+					</div>
+				</a>
+
+				<a href="https://www.youtube.com/@亲爱的缪斯" target="_blank" class="social-link youtube">
+					<div class="social-icon">
+						<i class="fab fa-youtube"></i>
+					</div>
+					<div class="social-info">
+						<h4>YouTube</h4>
+						<p>【亲爱的缪斯】互联网搞钱相关知识分享</p>
+					</div>
+					<div class="social-arrow">
+						<i class="fas fa-chevron-right"></i>
+					</div>
+				</a>
+
+				<a href="https://space.bilibili.com/1372455931?spm_id_from=333.33.0.0" target="_blank" class="social-link bilibili">
+					<div class="social-icon">
+						<i class="fas fa-tv"></i>
+					</div>
+					<div class="social-info">
+						<h4>哔哩哔哩</h4>
+						<p>【亲爱的缪斯_】AI 和 Web3 相关知识分享</p>
+					</div>
+					<div class="social-arrow">
+						<i class="fas fa-chevron-right"></i>
+					</div>
+				</a>
+
+				<a href="https://github.com/miusing" target="_blank" class="social-link github">
+					<div class="social-icon">
+						<i class="fab fa-github"></i>
+					</div>
+					<div class="social-info">
+						<h4>GitHub</h4>
+						<p>查看我的开源项目</p>
+					</div>
+					<div class="social-arrow">
+						<i class="fas fa-chevron-right"></i>
+					</div>
+				</a>
+			</div>
+		</div>
+	</div>
+
+	<!-- 页脚 -->
+	<footer class="footer">
+		<div class="copyright">
+			<!-- 版权信息将通过JavaScript动态生成 -->
+		</div>
+	</footer>
+
+	<!-- 复制成功提示 -->
+	<div class="toast" id="toast-message">
+		<i class="fas fa-check-circle"></i>
+		<span>微信号已复制到剪贴板！</span>
+	</div>
+
+	<!-- 主脚本 -->
+	<script src="script.js"></script>
+</body>
+
+</html>
