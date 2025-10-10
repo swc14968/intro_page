@@ -1,7 +1,7 @@
-# 缪斯极简个人主页
+# Neil极简个人主页
 
 ## 项目预览
-https://museact.ai
+https://me.everything.cafe
 
 ## 🧭 项目简介
 
@@ -277,16 +277,3 @@ MIT License
 4. 推送到分支 (`git push origin feature/AmazingFeature`)
 5. 打开 Pull Request
 
-## 📞 支持
-
-如果您在使用过程中遇到问题，可以：
-
-- 提交 [Issue](https://github.com/miusing/muse-home/issues)
-- 查看 [Wiki](https://github.com/miusing/muse-home/wiki)
-- 联系作者：[GitHub](https://github.com/miusing)
-
----
-
-**注意**：请确保 `assets/images/` 文件夹中包含必要的图片文件（头像、微信二维码等）。
-
-Made with ❤️ by [缪斯](https://github.com/miusing)
