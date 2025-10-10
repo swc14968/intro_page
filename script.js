@@ -1,4 +1,4 @@
-/**
+        /**
  * 缪斯个人主页 - JavaScript文件
  * 包含所有功能：配置、动画、工具函数等
  */
@@ -7,25 +7,25 @@
 const CONFIG = {
   // 基本信息
   basic: {
-    name: "缪斯",
-    title: "数字游民 & 互联网探索者",
-    location: "中国，成都",
-    avatar: "./assets/images/Muse.jpg",
+    name: "叫我小陈同学",
+    title: "独立咖啡 & 空手道 & 人类饥饿消除计划",
+    location: "中国，武汉",
+    avatar: "./assets/images/Neil.jpg",
   },
 
   // 联系方式
   contact: {
     wechat: "./assets/images/Wechat.jpg",
-    publicAccount: "./assets/images/gzh.jpg",
-    contactText: "欢迎添加个人社交媒体互相学习！",
-    github: "https://github.com/miusing",
-    youtube: "https://www.youtube.com/@亲爱的缪斯",
-    bilibili: "https://space.bilibili.com/1372455931"
+    publicAccount: "./assets/images/Wechat_public.jpg",
+    contactText: "联系我",
+    github: "https://github.com/swc14968",
+    youtube: "https://github.com/swc14968",
+    bilibili: "https://github.com/swc14968"
   },
 
   // 关于我部分
   about: {
-    content: "拥有 4 年 AI 算法与应用开发经验，主打 AI 技术栈实践与创新。顺带折腾自媒体和 Crypto，有点野路子但很实战。好奇心重，热爱瞎搞各种新东东。熟练使用 Python，喜欢沉浸在互联网世界中自由穿梭与价值创造。信奉“边学边干”，致力于以技术和内容为驱动，实现可持续的线上收入模式。"
+    content: ""
   },
 
 
@@ -34,15 +34,15 @@ const CONFIG = {
 
   // 个人产品
   products: {
-    comingSoon: true,
+    comingSoon: false,
     productsList: []
   },
 
   // 版权信息
   copyright: {
     year: "2021 - 2025",
-    name: "缪斯",
-    url: "https://museact.ai"
+    name: "Neil",
+    url: "https://everything.cafe",
   },
 
   // 主题颜色
@@ -141,25 +141,25 @@ function applyBasicInfo() {
     if (!CONFIG.basic) return;
 
     const nameElement = document.querySelector('.profile h1');
-    if (nameElement) nameElement.textContent = CONFIG.basic.name || '缪斯';
+    if (nameElement) nameElement.textContent = CONFIG.basic.name || '叫我小陈同学';
 
     const titleElement = document.querySelector('.profile .title');
     if (titleElement) {
-        titleElement.innerHTML = `<i class="fas fa-code"></i>${CONFIG.basic.title || '数字游民 & 互联网探索者'}`;
+        titleElement.innerHTML = `<i class="fas fa-code"></i>${CONFIG.basic.title || '独立咖啡&空手道&人类饥饿消除计划'}`;
     }
 
     const locationElement = document.querySelector('.location span');
-    if (locationElement) locationElement.textContent = CONFIG.basic.location || '中国，成都';
+    if (locationElement) locationElement.textContent = CONFIG.basic.location || '中国，武汉';
 
     const avatarElement = document.querySelector('.avatar img');
-    if (avatarElement) avatarElement.src = CONFIG.basic.avatar || './assets/images/Muse.jpg';
+    if (avatarElement) avatarElement.src = CONFIG.basic.avatar || './assets/images/Neil.jpg';
 }
 
 function applyContactInfo() {
     if (!CONFIG.contact) return;
 
     const contactTextElement = document.querySelector('.contact-text p');
-    if (contactTextElement) contactTextElement.textContent = CONFIG.contact.contactText || '欢迎添加个人社交媒体互相学习！';
+    if (contactTextElement) contactTextElement.textContent = CONFIG.contact.contactText || '联系我';
 }
 
 function applyAboutInfo() {
@@ -404,7 +404,7 @@ function setupWechatCopy() {
         copyWechatBtn.addEventListener('click', function(e) {
             e.preventDefault();
 
-            const wechatId = 'museaction';
+            const wechatId = 'DeerOnChampaign';
 
             if (navigator.vibrate) {
                 navigator.vibrate(50);
@@ -444,7 +444,7 @@ function setupPublicAccountQR() {
                     </div>
                     <div class="qr-container">
                         <img src="${CONFIG.contact.publicAccount}" alt="公众号二维码" class="qr-image">
-                        <p class="qr-text">扫码关注「亲爱的缪斯」</p>
+                        <p class="qr-text">扫码关注我的公众号 -「有鹿游原」</p>
                     </div>
                 </div>
             `;
